@@ -60,15 +60,6 @@ class QuotesSpider(scrapy.Spider):
         tepStr += "'}"
         emptyJson.append(tepStr)
 
-        tepStr = "{'"
-        tepStr += response.xpath(
-            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[7]/b/text()').extract_first()
-        tepStr += "':'"
-        tepStr += response.xpath(
-            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[7]/span/text()').extract_first()
-        tepStr += "'}"
-        emptyJson.append(tepStr)
-
         yield {
             'name': response.css("h1::text").extract_first(),
             'country': response.css("div h3.PlayersSearchLink b::text").extract(),

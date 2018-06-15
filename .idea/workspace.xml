@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5741b7f8-b06e-4f13-bf3e-e03afbb9d198" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/odi_stats.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playerProfile/spiders/singlePlayer_odi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_stats.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playerProfile/spiders/singlePlayer_t20.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/t20_stats.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cSSxPath" beforeDir="false" afterPath="$PROJECT_DIR$/cSSxPath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerProfile/spiders/singlePlayerTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/playerProfile/spiders/singlePlayer_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/odi_stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/odi_stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerProfile/spiders/singlePlayer_odi.py" beforeDir="false" afterPath="$PROJECT_DIR$/playerProfile/spiders/singlePlayer_odi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerProfile/spiders/singlePlayer_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/playerProfile/spiders/singlePlayer_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_stats.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,19 +22,47 @@
       <file leaf-file-name="singlePlayer_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playerProfile/spiders/singlePlayer_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1313">
-              <caret line="158" column="90" selection-start-line="158" selection-start-column="90" selection-end-line="158" selection-end-column="90" />
+            <state relative-caret-position="915">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="singlePlayer_odi.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="singlePlayer_odi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playerProfile/spiders/singlePlayer_odi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-105">
-              <caret line="68" column="21" lean-forward="true" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+            <state relative-caret-position="270">
+              <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_stats.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_stats.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1793" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="odi_stats.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/odi_stats.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2393" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="singlePlayer_t20.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playerProfile/spiders/singlePlayer_t20.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t20_stats.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/t20_stats.json">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="playerProfile.pstat" pinned="false" current-in-tab="false">
@@ -47,12 +75,15 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>2</find>
-      <find>quotes</find>
       <find>odi</find>
+      <find>quotes</find>
+      <find>tr[2]</find>
     </findStrings>
     <replaceStrings>
       <replace>1</replace>
       <replace>test</replace>
+      <replace>t20</replace>
+      <replace>tr[3]</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -63,7 +94,11 @@
       <list>
         <option value="$PROJECT_DIR$/playerProfile/spiders/singlePlayerTest.py" />
         <option value="$PROJECT_DIR$/playerProfile/spiders/singlePlayerODI.py" />
+        <option value="$PROJECT_DIR$/test_stats.json" />
+        <option value="$PROJECT_DIR$/odi_stats.json" />
+        <option value="$PROJECT_DIR$/playerProfile/spiders/singlePlayer_odi.py" />
         <option value="$PROJECT_DIR$/playerProfile/spiders/singlePlayer_test.py" />
+        <option value="$PROJECT_DIR$/playerProfile/spiders/singlePlayer_t20.py" />
       </list>
     </option>
   </component>
@@ -174,10 +209,19 @@
       <option name="presentableId" value="Default" />
       <updated>1528877510265</updated>
     </task>
+    <task id="LOCAL-00001" summary="added test stats">
+      <created>1529055331477</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1529055331477</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="48" width="1315" height="628" extended-state="0" />
+    <frame x="36" y="48" width="1315" height="628" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -209,6 +253,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added test stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test stats" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/playerProfile/spiders/singlePlayer_test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -233,17 +281,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playerProfile/spiders/singlePlayer_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1313">
-          <caret line="158" column="90" selection-start-line="158" selection-start-column="90" selection-end-line="158" selection-end-column="90" />
+        <state relative-caret-position="915">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_stats.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1793" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/odi_stats.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2393" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/playerProfile/spiders/singlePlayer_odi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="68" column="21" lean-forward="true" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+        <state relative-caret-position="270">
+          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playerProfile/spiders/singlePlayer_t20.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t20_stats.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
