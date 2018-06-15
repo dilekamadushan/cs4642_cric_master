@@ -2,35 +2,85 @@ import scrapy
 
 
 class QuotesSpider(scrapy.Spider):
-    name = "quotes"
+    name = "odi"
     start_urls = [
         'http://www.espncricinfo.com/ci/content/player/caps.html?country=8;class=2'
     ]
 
-    # cric_old_template.page-context-top.no-subnav div#ciHomeContent div#ciMainContainer div#ciHomeContentlhs div.pnl650M div.ciWPContainer div.ciPlayerbycapstable ul
-    # body  # cric_old_template.page-context-top.no-subnav div#ciHomeContent div#ciMainContainer div#ciHomeContentlhs div.pnl650M div.ciWPContainer div.ciPlayerbycapstable ul li.sep ul li.ciPlayername a.ColumnistSmry
     def parse(self, response):
         for ref in response.css('div.ciPlayerbycapstable ul li.ciPlayername a::attr(href)'):
             yield response.follow(ref, self.parse_page)
 
     def parse_page(self, response):
-        # for quote in response.css('div.quote'):
-        AttributeList = response.css("p.ciPlayerinformationtxt b::text").extract()
-        ValueList = response.css("p.ciPlayerinformationtxt span::text").extract()
+
         emptyJson = []
 
-        for i in range(len(AttributeList)):
-            tepStr = "{'"
-            tepStr += AttributeList[i]
-            tepStr += "':'"
-            tepStr += ValueList[i]
-            tepStr += "'}"
-            emptyJson.append(tepStr)
-        # cric_old_template.page-context-top.no-subnav div#ciHomeContent div#ciMainContainer div#ciHomeContentlhs div.pnl490M div.ciPlayernametxt div h3.PlayersSearchLink b
+        tepStr = "{'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[2]/b/text()').extract_first()
+        tepStr += "':'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[2]/span/text()').extract_first()
+        tepStr += "'}"
+        emptyJson.append(tepStr)
+
+        tepStr = "{'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[3]/b/text()').extract_first()
+        tepStr += "':'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[3]/span/text()').extract_first()
+        tepStr += "'}"
+        emptyJson.append(tepStr)
+
+        tepStr = "{'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[4]/b/text()').extract_first()
+        tepStr += "':'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[4]/span/text()').extract_first()
+        tepStr += "'}"
+        emptyJson.append(tepStr)
+
+        tepStr = "{'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[5]/b/text()').extract_first()
+        tepStr += "':'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[5]/span/text()').extract_first()
+        tepStr += "'}"
+        emptyJson.append(tepStr)
+
+        tepStr = "{'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[6]/b/text()').extract_first()
+        tepStr += "':'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[6]/span/text()').extract_first()
+        tepStr += "'}"
+        emptyJson.append(tepStr)
+
+        tepStr = "{'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[7]/b/text()').extract_first()
+        tepStr += "':'"
+        tepStr += response.xpath(
+            '/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[7]/span/text()').extract_first()
+        tepStr += "'}"
+        emptyJson.append(tepStr)
+
         yield {
             'name': response.css("h1::text").extract_first(),
             'country': response.css("div h3.PlayersSearchLink b::text").extract(),
             'player_ifo': emptyJson,
+            # 'basic_info': basicInfoStr,
+            # "'" + response.xpath('/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[5]/b').extract() + "'":
+            #     response.xpath('/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[5]/span').extract(),
+            # "'" + response.xpath('/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[6]/b').extract() + "'":
+            #     response.xpath('/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[6]/span').extract(),
+            # "'" + response.xpath('/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[7]/b').extract() + "'":
+            #     response.xpath('/html/body/div[4]/div[1]/div[1]/div[4]/div[2]/div/p[7]/span').extract(),
+
             'profile': response.css("p.ciPlayerprofiletext1::text").extract(),
             'odi_batting_matches':
                 response.xpath('/html/body/div[4]/div[1]/div[1]/div[4]/table[1]/tbody/tr[2]/td[2]/text()').extract()[
